@@ -1,0 +1,12 @@
+# configs/cwgan_config.yaml
+model_name: "CWGAN"
+noise_dim: 30
+hidden_dim: 512
+n_layers: 4
+clip_value: 0.01
+learning_rate_g: 0.00005
+learning_rate_d: 0.00005
+batch_size: 64
+epochs: 300
+n_critic: 5          # critic updates per generator update
+n_synthetic: 251

@@ -1,0 +1,10 @@
+# configs/cgan_lstm_config.yaml
+model_name: "CGAN-LSTM"
+noise_dim: 3          # per step
+hidden_dim: 64
+lstm_layers: 1
+clip_value: 0.075
+learning_rate: 0.0002
+batch_size: 64
+epochs: 300
+n_synthetic: 251

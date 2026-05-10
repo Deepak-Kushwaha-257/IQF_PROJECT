@@ -1,0 +1,42 @@
+# ============================================================
+# IQF Project — Requirements
+# Deep Generative Modeling for Financial Time Series (VaR)
+# Ericson et al. 2024 — arXiv:2401.10370
+# ============================================================
+
+# Core scientific stack
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+matplotlib>=3.6
+seaborn>=0.12
+tqdm>=4.64
+joblib>=1.2
+pyarrow>=10.0
+python-dotenv>=0.21
+
+# Financial / econometric
+arch>=5.3
+statsmodels>=0.13
+pandas-datareader>=0.10
+fredapi>=0.5
+nelson-siegel-svensson
+
+# ML utilities
+scikit-learn>=1.1
+umap-learn>=0.5
+pyyaml>=6.0
+
+# Deep learning — TensorFlow (CGAN-FC, CGAN-LSTM, VAE)
+tensorflow>=2.10,<2.13
+
+# Deep learning — PyTorch (CWGAN, SIG)
+torch>=1.13
+torchvision>=0.14
+
+# Signature model (install separately if binary unavailable)
+# signatory>=1.2.6   # pip install signatory --no-binary signatory
+
+# Diffusion model (TimeGrad via GluonTS)
+# gluonts>=0.12
+# mxnet==1.9.1  # GluonTS backend — only if doing DIFFUSION model

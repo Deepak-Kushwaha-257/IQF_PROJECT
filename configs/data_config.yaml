@@ -1,0 +1,48 @@
+# configs/data_config.yaml
+# Data pipeline configuration
+
+# Rolling window parameters
+condition_length: 10      # p: past days used as model input
+target_length: 10         # q: future days to forecast
+window_size: 20           # p + q
+
+# Train/test split
+train_split: 0.80
+random_seed: 42
+
+# Normalization
+scaler_type: "standard"   # "standard" = StandardScaler, "minmax" = MinMaxScaler
+
+# Number of yield curve tenors
+n_tenors: 9
+
+# Backtesting
+n_synthetic: 251          # synthetic paths per forecast date
+backtest_n_subperiods: 3  # rolling sub-periods for backtesting
+
+# FRED Ticker IDs for the 9 tenors
+fred_tickers:
+  DGS3MO:  "3m"
+  DGS6MO:  "6m"
+  DGS1:    "1y"
+  DGS2:    "2y"
+  DGS3:    "3y"
+  DGS5:    "5y"
+  DGS10:   "10y"
+  DGS20:   "20y"
+  DGS30:   "30y"
+
+# Dataset date ranges
+datasets:
+  usdyc2:
+    start: "2008-01-01"
+    end:   "2023-02-16"
+    label: "Par Yield 2008-2023"
+  usdyc3:
+    start: "2000-01-01"
+    end:   "2023-02-16"
+    label: "Par Yield 2000-2023"
+
+# Parametric model rolling windows
+ar_window_years: 5
+garch_window_years: 3

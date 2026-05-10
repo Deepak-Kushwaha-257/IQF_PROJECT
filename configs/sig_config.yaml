@@ -1,0 +1,10 @@
+# configs/sig_config.yaml
+model_name: "SIG"
+noise_dim: 30
+sig_depth: 2          # signature truncation depth (2 = manageable size)
+hidden_dim: 64
+n_layers: 3
+learning_rate: 0.001
+batch_size: 64
+epochs: 200
+n_synthetic: 251
